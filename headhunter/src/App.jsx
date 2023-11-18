@@ -6,6 +6,7 @@ import Homepage from './components/Homepage';
 import Catalog from './components/Catalog';
 import Login from './components/Login';
 import Register from './components/Register';
+import Create from './components/Create';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Catalog/>
       <Login/>
       <Register/>
+      <Create/>
       <Footer/>
     </>
   )
