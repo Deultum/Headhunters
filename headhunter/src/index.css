@@ -64,3 +64,45 @@ body {
 .footer-content a:hover {
   text-decoration: none;
 }
+
+/* Custom CSS for the catalog page */
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #555;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
