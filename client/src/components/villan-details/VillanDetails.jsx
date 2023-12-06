@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import * as gameService from '../../services/gameService';
-import * as commentService from '../../services/commentService';
 import AuthContext from "../../contexts/authContext";
 import { pathToUrl } from "../../utils/pathUtils";
 import Path from "../../paths";
@@ -21,19 +20,7 @@ export default function VillanDetails() {
      
     }, [gameId]);
 
-    const addCommentHandler = async (e) => {
-        e.preventDefault();
-
-        const formData = new FormData(e.currentTarget);
-
-        const newComment = await commentService.create(
-            gameId,
-            formData.get('comment')
-        );
-
-
-
-    }
+  
     const deleteButtonClickHandler = async () => {
         const hasConfirmed = confirm(`${game.title} has been captured Dear ot Alive ? `);
 

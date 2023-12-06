@@ -31,7 +31,6 @@ export default function VillanEdit() {
 
             navigate('/games');
         } catch (err) {
-            // Error notification
             console.log(err);
         }
     }

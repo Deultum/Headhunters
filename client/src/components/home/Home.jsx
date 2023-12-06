@@ -18,7 +18,7 @@ export default function Home({
 
             <div className="welcome-message">
                 <h2>Get your paycheck today</h2>
-                <h3>The best headhunters website</h3>
+                <h3>The best prices for</h3>
             </div>
             <img src="./images/FBI_Most_Wanted.svg.png" alt="hero" />
 
