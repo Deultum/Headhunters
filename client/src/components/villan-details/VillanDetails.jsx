@@ -10,7 +10,6 @@ export default function VillanDetails() {
     const navigate = useNavigate();
     const { email, userId } = useContext(AuthContext);
     const [game, setGame] = useState({});
-    // const [comments, setComments] = useState([]);
     const { gameId } = useParams();
 
 
@@ -19,8 +18,7 @@ export default function VillanDetails() {
         gameService.getOne(gameId)
             .then(setGame);
 
-        // commentService.getAll(gameId)
-        //     .then(setComments);
+     
     }, [gameId]);
 
     const addCommentHandler = async (e) => {
@@ -35,7 +33,6 @@ export default function VillanDetails() {
 
 
 
-        setComments(state => [...state, { ...newComment, owner: { email } }]);
     }
     const deleteButtonClickHandler = async () => {
         const hasConfirmed = confirm(`${game.title} has been captured Dear ot Alive ? `);

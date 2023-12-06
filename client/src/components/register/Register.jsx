@@ -12,7 +12,7 @@ const RegisterFormKeys = {
 export default function Register() {
 
     const { registerSubmitHandler } = useContext(AuthContext);
-    const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+    const { values, onChange, onSubmit, errors } = useForm(registerSubmitHandler, {
         [RegisterFormKeys.Email]: '',
         [RegisterFormKeys.Password]: '',
         [RegisterFormKeys.ConfirmPassword]: '',
@@ -23,6 +23,7 @@ export default function Register() {
         <section id="register-page" className="content auth">
             <form id="register" onSubmit={onSubmit}>
                 <div className="container">
+                {errors && errors.message && <p className="error">{errors.message}</p>}
                     
                     <h1>Register</h1>
 
@@ -30,7 +31,6 @@ export default function Register() {
                     <input
                         type="email" id="email"
                         name="email"
-                        placeholder="maria@email.com"
                         onChange={onChange}
                         values={values[RegisterFormKeys.Email]}
                     />
@@ -42,6 +42,7 @@ export default function Register() {
                         id="register-password"
                         onChange={onChange}
                         values={values[RegisterFormKeys.Password]}
+                        required
                     />
 
                     <label htmlFor="con-pass">Confirm Password:</label>
@@ -51,6 +52,7 @@ export default function Register() {
                         id="confirm-password"
                         onChange={onChange}
                         values={values[RegisterFormKeys.ConfirmPassword]}
+                        required
                     />
 
                     <input className="btn submit" type="submit" value="Register" />
