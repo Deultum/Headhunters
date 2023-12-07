@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import * as gameService from '../../services/gameService'
+import * as villanService from '../../services/villanServices'
 import VillantCard from './villantCard';
 
 export default function Home({
@@ -9,8 +9,9 @@ export default function Home({
 }) {
     const [villans, setVillans] = useState([]);
     useEffect(() => {
-        gameService.getLatest()
+        villanService.getLatest()
             .then(result => setVillans(result))
+            .catch((err) => {console.log(err)})
     }, [])
 
     return (

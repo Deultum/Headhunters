@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 
-import * as gameService from '../../services/gameService';
+import * as villanService from '../../services/villanServices';
 import VillanListItem from './villan-listItem/VillanListItem';
 
 export default function VillanList() {
     const [games, setGames] = useState([]);
 
     useEffect(() => {
-        gameService.getAll()
+        villanService.getAll()
             .then(result => setGames(result))
             .catch(err => {
                 console.log(err);

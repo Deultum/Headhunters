@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from 'react-router-dom';
 
-import * as gameService from '../../services/gameService';
+import * as villanService from '../../services/villanServices';
 import { useEffect, useState } from 'react';
 
 export default function VillanEdit() {
@@ -15,7 +15,7 @@ export default function VillanEdit() {
     });
 
     useEffect(() => {
-        gameService.getOne(gameId)
+        villanService.getOne(gameId)
             .then(result => {
                 setGame(result);
             });
@@ -27,7 +27,7 @@ export default function VillanEdit() {
         const values = Object.fromEntries(new FormData(e.currentTarget));
 
         try {
-            await gameService.edit(gameId, values);
+            await villanService.edit(gameId, values);
 
             navigate('/games');
         } catch (err) {

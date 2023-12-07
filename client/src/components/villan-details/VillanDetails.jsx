@@ -1,20 +1,20 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import * as gameService from '../../services/gameService';
+import * as villanService from '../../services/villanServices';
 import AuthContext from "../../contexts/authContext";
 import { pathToUrl } from "../../utils/pathUtils";
 import Path from "../../paths";
 
 export default function VillanDetails() {
     const navigate = useNavigate();
-    const { email, userId } = useContext(AuthContext);
+    const { email, userId, username } = useContext(AuthContext);
     const [game, setGame] = useState({});
     const { gameId } = useParams();
 
 
 
     useEffect(() => {
-        gameService.getOne(gameId)
+        villanService.getOne(gameId)
             .then(setGame);
 
      
@@ -25,7 +25,7 @@ export default function VillanDetails() {
         const hasConfirmed = confirm(`${game.title} has been captured Dear ot Alive ? `);
 
         if (hasConfirmed) {
-            await gameService.remove(gameId);
+            await villanService.remove(gameId);
 
             navigate('/games');
         }
@@ -43,7 +43,7 @@ export default function VillanDetails() {
                     <p className="type"> Crime commited: {game.category}</p>
                 </div>
 
-                <p className="text">{game.summary}</p>
+                <p className="text">Last known location :{game.summary}</p>
 
                 {isOwner && (
 
