@@ -17,7 +17,7 @@ export default function VillantCard({
             <div className="rating">
             </div>
             <div className="data-buttons">
-                <Link to={pathToUrl(Path.GameDetails, { gameId: _id })} className="btn details-btn">Details</Link>
+                <Link to={pathToUrl(Path.VillanDetails, { gameId: _id })} className="btn details-btn">Details</Link>
             </div>
         </div>
     );

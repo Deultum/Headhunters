@@ -1,9 +1,9 @@
 const Path = {
     Home: '/',
     Logout: '/logout',
-    GameEdit: '/games/:gameId/edit',
-    GameDelete: '/games/:gameId/delete',
-    GameDetails: '/games/:gameId',
+    VillanEdit: '/games/:gameId/edit',
+    VillanDelete: '/games/:gameId/delete',
+    VillanDetails: '/games/:gameId',
 };
 
 export default Path;

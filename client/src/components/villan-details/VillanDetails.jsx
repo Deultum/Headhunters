@@ -48,7 +48,7 @@ export default function VillanDetails() {
                 {isOwner && (
 
                     <div className="buttons">
-                        <Link to={pathToUrl(Path.GameEdit, { gameId })} className="button">Edit</Link>
+                        <Link to={pathToUrl(Path.VillanEdit, { gameId })} className="button">Edit</Link>
                         <button  onClick={deleteButtonClickHandler} className="button">Remove</button>
                     </div>
                 )}

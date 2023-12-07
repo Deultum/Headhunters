@@ -5,7 +5,7 @@ import Path from './paths';
 
 import Header from "./components/header/Header"
 import Home from "./components/home/Home"
-import VillanList from './components/game-list/VillanList';
+import VillanList from './components/villan-list/VillanList';
 import CreateVillan from './components/create-villan/CreateVillan';
 import VillanDetails from './components/villan-details/VillanDetails';
 import VillanEdit from './components/villan-edit/VillanEdit';
@@ -37,7 +37,7 @@ function App() {
 
                         <Route element={<AuthGuard />}>
                             <Route path="/games/create" element={<CreateVillan />} />
-                            <Route path={Path.GameEdit} element={<VillanEdit />} />
+                            <Route path={Path.VillanEdit} element={<VillanEdit />} />
 
                         </Route>
                     </Routes>
