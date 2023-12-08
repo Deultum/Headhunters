@@ -28,7 +28,7 @@ export default function VillanCreate() {
                     <label htmlFor="leg-title">Outlaw name:</label>
                     <input type="text"
                         id="title"
-                        name="name"
+                        name="title"
                         placeholder="Enter villan name..."
                         required />
 

@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
-
+import { useEffect, useState, useContext } from 'react';
 import * as villanService from '../../services/villanServices';
-import VillanListItem from '../villan-list/villan-listItem/VillanListItem';
+import CapturedVillansListItem from './CapturedVillansListItem';
+import AuthContext from '../../contexts/authContext';
 
 export default function CapturedList() {
+    const { username, userId } = useContext(AuthContext);
     const [villans, setVillans] = useState([]);
 
     useEffect(() => {
@@ -16,14 +17,19 @@ export default function CapturedList() {
 
     return (
         <section id="catalog-page">
-            <h1>Villans list</h1>
+            <h1>Captured list</h1>
 
-            {villans.filter(villan => villan.isCaptured == 'true').map(villan => (
-                <VillanListItem key={villan._id} {...villan} />
+            {villans.filter(villan => villan.isCaptured === 'true').map(villan => (
+                <CapturedVillansListItem
+                    key={villan._id}
+                    {...villan}
+                    gameId={villan._id} 
+                    username={username}
+                />
             ))}
 
             {villans.length === 0 && (
-                <h3 className="no-articles">No villans yet</h3>
+                <h3 className="no-articles">No villans captured</h3>
             )}
         </section>
     );
