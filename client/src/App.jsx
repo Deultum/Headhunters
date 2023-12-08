@@ -9,6 +9,7 @@ import VillanList from './components/villan-list/VillanList';
 import CreateVillan from './components/create-villan/CreateVillan';
 import VillanDetails from './components/villan-details/VillanDetails';
 import VillanEdit from './components/villan-edit/VillanEdit';
+import CapturedVillans from './components/captured-list/CapturedVIllans';
 import Login from './components/login/Login';
 import Logout from './components/Logout/Logout';
 import Register from './components/register/Register';
@@ -36,6 +37,7 @@ function App() {
                         <Route path="*" element={<Page404 />} />
 
                         <Route element={<AuthGuard />}>
+                            <Route path="/games/captured" element={<CapturedVillans />} />
                             <Route path="/games/create" element={<CreateVillan />} />
                             <Route path={Path.VillanEdit} element={<VillanEdit />} />
 

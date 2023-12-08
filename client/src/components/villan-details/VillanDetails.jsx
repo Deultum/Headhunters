@@ -31,6 +31,14 @@ export default function VillanDetails() {
         }
     }
     const isOwner = userId === game._ownerId;
+    const editVillanCaptureHandler = async () => {
+        try {
+            await villanService.edit(gameId, { ...game, isCaptured: 'true' });
+            navigate('/games');
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     return (
         <section id="game-details">
@@ -50,6 +58,7 @@ export default function VillanDetails() {
                     <div className="buttons">
                         <Link to={pathToUrl(Path.VillanEdit, { gameId })} className="button">Edit</Link>
                         <button  onClick={deleteButtonClickHandler} className="button">Remove</button>
+                        <button onClick={editVillanCaptureHandler} className="button">Captured</button>
                     </div>
                 )}
             </div>

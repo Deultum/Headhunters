@@ -12,6 +12,7 @@ export default function VillanEdit() {
         maxLevel: '',
         imageUrl: '',
         summary: '',
+        
     });
 
     useEffect(() => {
@@ -21,7 +22,7 @@ export default function VillanEdit() {
             });
     }, [gameId]);
 
-    const editGameSubmitHandler = async (e) => {
+    const editVillanSubmitHandler = async (e) => {
         e.preventDefault();
 
         const values = Object.fromEntries(new FormData(e.currentTarget));
@@ -44,7 +45,7 @@ export default function VillanEdit() {
 
     return (
         <section id="create-page" className="auth">
-            <form id="create" onSubmit={editGameSubmitHandler}>
+            <form id="create" onSubmit={editVillanSubmitHandler}>
                 <div className="container">
                     <h1>Edit villan</h1>
                     <label htmlFor="leg-title">Villan name:</label>

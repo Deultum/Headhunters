@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 
 import * as villanService from '../../services/villanServices';
-import VillanListItem from './villan-listItem/VillanListItem';
+import VillanListItem from '../villan-list/villan-listItem/VillanListItem';
 
-export default function VillanList() {
+export default function CapturedList() {
     const [villans, setVillans] = useState([]);
 
     useEffect(() => {
@@ -18,7 +18,7 @@ export default function VillanList() {
         <section id="catalog-page">
             <h1>Villans list</h1>
 
-            {villans.filter(villan => villan.isCaptured == 'false').map(villan => (
+            {villans.filter(villan => villan.isCaptured == 'true').map(villan => (
                 <VillanListItem key={villan._id} {...villan} />
             ))}
 

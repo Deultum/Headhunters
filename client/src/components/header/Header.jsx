@@ -15,6 +15,7 @@ export default function Header() {
                 <Link to="/games">Villants list</Link>
                 {isAuthenticated && (
                     <div id="user">
+                        <Link to="/games/captured">Captured</Link>
                         <Link to="/games/create">Add new villant</Link>
                         <Link to="/logout">Logout</Link>
                     </div>

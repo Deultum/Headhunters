@@ -26,7 +26,8 @@ export default function Home({
             <div id="home-page">
                 <h1>Latest in the list</h1>
 
-                {villans.map(villan => <VillantCard {...villan} key={villan._id} />)}
+                {villans.filter(villan => villan.isCaptured == 'false')
+                .map(villan => <VillantCard {...villan} key={villan._id} />)}
 
                 {!villans.length &&
                     <p className="no-articles">List empty</p>
