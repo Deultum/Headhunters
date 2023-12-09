@@ -5,7 +5,7 @@ import AuthContext from "../../contexts/authContext";
 
 export default function CapturedList() {
     const [villans, setVillans] = useState([]);
-    const { email, userId, username } = useContext(AuthContext);
+    const {  userId } = useContext(AuthContext);
     const loggedInUser = userId 
     useEffect(() => {
         villanService.getAll()

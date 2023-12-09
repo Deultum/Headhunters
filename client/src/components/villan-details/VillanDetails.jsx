@@ -7,7 +7,7 @@ import Path from "../../paths";
 
 export default function VillanDetails() {
     const navigate = useNavigate();
-    const { email, userId, username } = useContext(AuthContext);
+    const {  userId } = useContext(AuthContext);
     const [game, setGame] = useState({});
     const { gameId } = useParams();
 
