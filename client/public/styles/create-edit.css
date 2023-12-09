@@ -18,14 +18,14 @@ input[type="text"] {
     height: 50px;
     margin-top: 10px;
     font-size: 24px;
-    border-radius: 50px;
+    border-radius: 10px;
     box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
 }
 
 textarea {
     width: 100%;
     min-width: 20vw;
-    min-height: 7em;
+    min-height: 3em;
     border: 2px solid #86a480;
     border-radius: 0.7em;
     font-size: 26px;

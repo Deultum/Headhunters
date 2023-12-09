@@ -1,5 +1,5 @@
 html {
-    font-family: Arial, sans-serif;
+    font-family: Tahoma, sans-serif;
     font-size: 16px;
     box-sizing: border-box;
 }
@@ -51,14 +51,3 @@ a {
     color: inherit;
 }
 
-blockquote {
-    font-style: italic;
-    margin: 0.5em;
-}
-
-blockquote>cite {
-    display: block;
-    text-align: right;
-    margin: 0.5em 2em;
-    font-weight: bold;
-}

@@ -7,10 +7,15 @@ export default function Header() {
         isAuthenticated,
         username,
     } = useContext(AuthContext);
+    
     return (
         <header>
             <h1><Link className="home" to="/">Headhunters</Link></h1>
-            <h4> <span>Welcome {username}</span></h4>
+            {isAuthenticated && (
+                <h4> <span>Welcome {username.split('@')[0]}</span></h4>
+                
+                )}
+                
             <nav>
                 <Link to="/games">Villants list</Link>
                 {isAuthenticated && (

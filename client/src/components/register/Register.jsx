@@ -33,6 +33,7 @@ export default function Register() {
                         name="email"
                         onChange={onChange}
                         values={values[RegisterFormKeys.Email]}
+                        required
                     />
 
                     <label htmlFor="pass">Password:</label>

@@ -78,7 +78,7 @@ input[type="email"] {
     height: 50px;
     margin-top: 10px;
     font-size: 24px;
-    border-radius: 50px;
+    border-radius: 10px;
     box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
 }
 
@@ -90,18 +90,17 @@ label[for="terms"]>input {
     margin-top: 30px;
     background: #0a8cde;
     height: 60px;
-    border-radius: 20px;
+    border-radius: 10px;
     color: white;
     font-size: 26px;
     cursor: pointer;
     font-weight: 900;
-    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
     transition: 0.5s;
 }
 
 .btn.submit:hover {
     color: white;
-    background-color: #8fa9b9;
+    background-color: #6cb4f7;
 }
 
 .container {
@@ -115,8 +114,8 @@ label[for="terms"]>input {
     bottom: 17px;
     right: 8px;
     text-decoration: none;
-    color: black;
-    background: rgb(103, 60, 177)7)
+    color: rgb(175, 219, 105);
+    background: rgb(103, 60, 177)7;
     border-radius: 10px;
     padding: 5px;
 }
