@@ -17,7 +17,7 @@ export default function Login() {
 
     return (
         <section id="login-page" className="auth">
-            <form id="login" onSubmit={onSubmit}>
+            <form id="login" onSubmit={(e) => onSubmit(e, values)}>
 
                 <div className="container">
                 {errors && errors.message && <p className="error">{errors.message}</p>}

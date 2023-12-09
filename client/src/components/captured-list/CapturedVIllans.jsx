@@ -24,7 +24,7 @@ export default function CapturedList() {
                     key={villan._id}
                     {...villan}
                     gameId={villan._id} 
-                    username={username}
+                    prize={villan.maxLevel}
                 />
             ))}
 

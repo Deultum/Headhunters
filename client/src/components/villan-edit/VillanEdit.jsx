@@ -59,7 +59,12 @@ export default function VillanEdit() {
 
                     <label htmlFor="game-img">Image:</label>
                     <input type="text" id="imageUrl" name="imageUrl" value={game.imageUrl} onChange={onChange} placeholder="Upload a photo..." />
-
+                    <input
+                        type="hidden"
+                        id="isCaptured"
+                        name="isCaptured"
+                        value="false"
+                    />
                     <label htmlFor="summary">More info:</label>
                     <textarea name="summary" value={game.summary} onChange={onChange} id="summary"></textarea>
                     <input className="btn submit" type="submit" value="Edit info" />

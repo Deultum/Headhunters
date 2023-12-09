@@ -51,7 +51,7 @@ export default function VillanDetails() {
                     <p className="type"> Crime commited: {game.category}</p>
                 </div>
 
-                <p className="text">Last known location :{game.summary}</p>
+                <p className="text">Last known location: {game.summary}</p>
 
                 {isOwner && (
 
