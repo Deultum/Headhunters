@@ -4,7 +4,6 @@ import CapturedVillansListItem from './CapturedVillansListItem';
 import AuthContext from '../../contexts/authContext';
 
 export default function CapturedList() {
-    const { username, userId } = useContext(AuthContext);
     const [villans, setVillans] = useState([]);
 
     useEffect(() => {
