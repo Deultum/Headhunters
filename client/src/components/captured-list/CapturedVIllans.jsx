@@ -1,11 +1,12 @@
 import { useEffect, useState, useContext } from 'react';
 import * as villanService from '../../services/villanServices';
 import CapturedVillansListItem from './CapturedVillansListItem';
-import AuthContext from '../../contexts/authContext';
+import AuthContext from "../../contexts/authContext";
 
 export default function CapturedList() {
     const [villans, setVillans] = useState([]);
-
+    const { email, userId, username } = useContext(AuthContext);
+    const loggedInUser = userId 
     useEffect(() => {
         villanService.getAll()
             .then(result => setVillans(result))
@@ -24,6 +25,8 @@ export default function CapturedList() {
                     {...villan}
                     gameId={villan._id} 
                     prize={villan.maxLevel}
+                    owner={villan._ownerId}
+                    loggedInUser={loggedInUser}
                 />
             ))}
 

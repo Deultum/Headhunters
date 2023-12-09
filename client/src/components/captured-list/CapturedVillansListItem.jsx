@@ -1,12 +1,16 @@
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import * as villanService from '../../services/villanServices';
+
 
 export default function CapturedVillansListItem({
     title,
     imageUrl,
     gameId,
-    prize
+    prize,
+    owner,
+    loggedInUser,
 }) {
+    
     const navigate = useNavigate();
 
     const deleteVillan = async () => {
@@ -14,7 +18,7 @@ export default function CapturedVillansListItem({
         
             try {
                 await villanService.remove(gameId);
-                navigate('/games');
+                navigate('/');
             } catch (error) {
                 console.error('Error while deleting:', error);
             }
@@ -25,11 +29,14 @@ export default function CapturedVillansListItem({
             <div className="allGames-info">
                 <img src={imageUrl} alt={title} />
                 <h1>{title}</h1>
-                <h6>For the prize of ${prize}</h6>
-               
-                <Link onClick={deleteVillan} className="details-button">
+                <h6>Amount paid for its head: ${prize}</h6>
+               {loggedInUser === owner &&(
+                   <button onClick={deleteVillan} className="details-button">
                     Remove from list
-                </Link>
+
+                </button>
+
+               )}
             </div>
         </div>
     );

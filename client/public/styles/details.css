@@ -59,11 +59,11 @@
 }
 
 .type {
-    display: block; /* Change from inline-block to block */
+    display: block; 
     color: #110101;
     font-size: 2em;
     margin-left: 10px;
-    margin-top: 10px; /* Add margin-top to create space between levels and type */
+    margin-top: 10px; 
 }
 
 
@@ -116,7 +116,7 @@
 .button {
     height: 15%;
     background-color: #2d2685;
-    border-radius: 20%;
+    border-radius: 10%;
     padding: 14px;
     margin-top: auto;
     font-size: 21px;

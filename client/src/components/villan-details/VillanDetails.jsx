@@ -34,7 +34,7 @@ export default function VillanDetails() {
     const editVillanCaptureHandler = async () => {
         try {
             await villanService.edit(gameId, { ...game, isCaptured: 'true' });
-            navigate('/games');
+            navigate('/games/captured');
         } catch (err) {
             console.log(err);
         }

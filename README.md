@@ -33,7 +33,7 @@ npm run dev
 - Villans are displayed in a grid format, and users can click on a villan's card to view its details.
 
   **Captured list**
-- Loged in users are able to access captured villans list with info who captured it.
+- Loged in users are able to access captured villans list.
 
 
   **Villan Details:**
